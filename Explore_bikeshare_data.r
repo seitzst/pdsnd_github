@@ -188,7 +188,7 @@ gender_age_use <- df_user %>%
     group_by(age_group, Gender) %>%
     summarize(X.count=n()) %>%
     mutate(X.perc = X.count/sum(X.count)*100)
-gender_age_use
+#gender_age_use
 
 #Duration for gender
 #Looking at gender and gender with age groups
@@ -196,7 +196,7 @@ gender_duration <- df_user %>%
     select(X, Gender, duration_min) %>%
     group_by(Gender) %>%
     summarize(duration_mean=mean(duration_min)) 
-gender_duration
+#gender_duration
 
 #What are the Customer types?
 customer_use <- df_user %>%
