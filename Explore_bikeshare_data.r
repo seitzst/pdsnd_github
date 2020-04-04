@@ -1,16 +1,17 @@
+#Project 2 - exploring data with R
+
 #Setup
 library(ggplot2)
 library(tidyr)
 library(dplyr)
 
+#import data
 ny = read.csv('new_york_city.csv')
 wash = read.csv('washington.csv')
 chi = read.csv('chicago.csv')
 
 #head(ny)
-
 #head(wash)
-
 #head(chi)
 
 #creat missing columns for Washington
