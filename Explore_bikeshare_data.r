@@ -189,7 +189,7 @@ gender_age_use <- df_user %>%
     group_by(age_group, Gender) %>%
     summarize(X.count=n()) %>%
     mutate(X.perc = X.count/sum(X.count)*100)
-gender_age_use
+#gender_age_use
 
 #Duration for gender
 #Looking at gender and gender with age groups
@@ -197,7 +197,7 @@ gender_duration <- df_user %>%
     select(X, Gender, duration_min) %>%
     group_by(Gender) %>%
     summarize(duration_mean=mean(duration_min)) 
-gender_duration
+#gender_duration
 
 #What are the Customer types?
 customer_use <- df_user %>%
@@ -217,7 +217,6 @@ user_prep <- df_user %>%
     )
 #dropping the outlier
 user_prep <- subset(user_prep, age>18)
-#user_prep
 
 #Plot Gender, Age and Duration
 plot_user <- ggplot(data = user_prep, aes(x = age, y = duration_mean, group = Gender)) +
@@ -228,3 +227,5 @@ plot_user <- ggplot(data = user_prep, aes(x = age, y = duration_mean, group = Ge
 plot_user
 
 system('python -m nbconvert Explore_bikeshare_data.ipynb')
+
+#submission date 2020/31/03
