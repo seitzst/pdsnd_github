@@ -216,7 +216,6 @@ user_prep <- df_user %>%
     )
 #dropping the outlier
 user_prep <- subset(user_prep, age>18)
-#user_prep
 
 #Plot Gender, Age and Duration
 plot_user <- ggplot(data = user_prep, aes(x = age, y = duration_mean, group = Gender)) +
